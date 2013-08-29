@@ -15,7 +15,7 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function getIndex()
+	public function showWelcome()
 	{
 		$products = Product::all();
 		return View::make('products.index', compact('products'));
