@@ -11,19 +11,6 @@
 |
 */
 
-//Route::get('/', 'HomeController@showWelcome');
-
-Route::group(array('prefix' => 'admin'), function() {
-
-	//Route::get('/', 'Admin\AdminController@getIndex');
-
-	Route::controllers(array(
-		'user' => 'Admin\UserController',
-		'/' => 'Admin\AdminController',
-	));
-
-});
-
-Route::controller('/', 'HomeController');
+Route::get('/', 'HomeController@showWelcome');
 
 View::composer('templates.main', 'CategoryComposer');
